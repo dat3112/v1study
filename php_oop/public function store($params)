@@ -1,0 +1,52 @@
+public function store($params)
+    {
+        $userID=Auth::user()->id;
+        $role=Auth::user()->role_id;
+        $params['user_id']=$userID;
+        $request = $this->requestRepository->find($params['request_id']);
+        $departmentRequest = $request->author->department_id;
+        $departmentUser = Auth::user()->department_id;
+        switch ($role) {
+            case config('constants.ROLE.ADMIN'):
+                if ($userID == $request->assign_id) {
+                    return $this->commentRepository->store($params);
+                } else {
+                    return response()->json([
+                        'data'=>[
+                            'status' => 'error',
+                            'message' => config('constants.COMMENT.USER.NOT_PERMISSION')
+                        ]
+                    ]);
+                }
+                break;
+            case config('constants.ROLE.QLBP'):
+                if ($departmentUser==$departmentRequest) {
+                    return $this->commentRepository->store($params);
+                } else {
+                    return response()->json([
+                        'data'=>[
+                            'status' => 'error',
+                            'message' => config('constants.COMMENT.USER.NOT_PERMISSION')
+                        ]
+                    ]);
+                }
+                break;
+            case config('constants.ROLE.CBNV'):
+                if ($userID == $request->author_id) {
+                    return $this->commentRepository->store($params);
+                } else {
+                    return response()->json([
+                        'data'=>[
+                            'status' => 'error',
+                            'message' => config('constants.COMMENT.USER.NOT_PERMISSION')
+                        ]
+                    ]);
+                }
+                break;
+            default:
+                return response()->json([
+                    'data'=>['message' => config('constants.COMMENT.NOT_PERMISSION')]
+                ]);
+                break;
+        }
+    }

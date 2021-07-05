@@ -1,0 +1,135 @@
+td a:hover{color: black}
+/*nav section a{display: block;}*/
+.product:hover{box-shadow: 0 0 10px grey; }
+.product{width: 45%; 
+		float: left;
+		min-height: 250px;
+		border:green thin solid;
+		margin: 22px;
+		border-radius:10px;
+		text-align: center;
+}
+
+.container-fluid{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.logo{
+	box-sizing: border-box;
+	float: left;
+	border:green thin solid;
+	height: 100px;
+	font-size:18px;
+	color:#090;
+	line-height:100px;
+	margin:auto;
+	text-align:center;
+}
+
+.banner{
+	box-sizing: border-box;
+	float: left;
+	border:green thin solid;
+	height: 100px;
+	font-size:18px;
+	color:#090;
+	line-height:100px;
+	margin:auto;
+	text-align:center;
+}
+.cart-product{border-bottom: green thin solid}
+.cart{
+	float: left;
+	line-height: 60px;
+	width: 50%;
+	box-sizing: border-box;
+	border: thin black solid;	
+}
+tbody{
+	height: 70px;
+}
+#order>table{
+	width: 100%;
+	border: black 1px solid;
+	box-sizing: border-box;
+	float: left;
+}
+#order>table>thead>tr>th{
+	border-right:black 1px solid ; 
+	border-bottom:black 1px solid ; 
+	padding: 0px 6px;
+	text-align: center;
+	box-sizing: border-box;
+	/*width: 16.66667%;*/
+	/*float: left;*/
+	height: 36px
+}
+
+.a{
+	float: left;
+	/*border: black thin solid;*/
+	width: 100%;
+	box-sizing: border-box;	
+}
+
+header{
+	box-sizing: border-box;
+	float: left;
+	border:green thin solid;
+	height: 100px;
+
+}
+
+nav{width: 100%;
+	box-sizing: border-box;
+	float: left;
+	border:green thin solid;
+	height: 40px;
+	background-color: #0FF;
+	font-size:18px;
+	color:#090;
+	line-height:40px;
+	margin:auto;
+	text-align:center;
+
+
+}
+nav>section{width: 16.6666667%;
+	box-sizing: border-box;
+	float: left;
+	border:green thin solid;
+	height: 40px;
+}
+aside{width: 20%;
+	box-sizing: border-box;
+	float: left;
+	border:green thin solid;
+	min-height: 600px;
+	/*text-align: center;
+	line-height:300px;*/
+	font-size:18px;
+	color:#090;
+
+}
+article{width: 60%;
+	box-sizing: border-box;
+	float: left;
+	border:green thin solid;
+	min-height: 300px;
+	/*text-align: center;*/
+	/*line-height: 300px;*/
+	font-size:18px;
+	color:#090;
+}
+footer{width: 100%;
+	box-sizing: border-box;
+	float: left;
+	border:green thin solid;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	font-size:18px;
+	color:#090;
+}
+section{text-align: center;}

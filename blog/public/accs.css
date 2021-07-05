@@ -1,0 +1,2 @@
+.dataHang a.btn{display: none;}
+.dataHang:hover a.btn{display: inline-block;}

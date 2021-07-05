@@ -1,0 +1,30 @@
+<?php
+	if(isset($_GET['request']))
+		switch($_GET['request']){
+			case'home':
+				include"views/home.php";
+				break;
+			case'news':
+				include"views/news.php";
+				break;
+			case'feedback':
+				include"views/feedback.php";
+				break;
+			case'cart':
+				include"views/cart.php";
+				break;
+			case'signin':
+				include"Views/signin.php";
+				break;
+			case'register':
+				include"Views/register.php";
+				break;
+			case 'logout':
+				unset($_SESSION['user']);
+				header("Location: .");
+				break;
+		}
+	else{
+		include"views/home.php";
+	}
+?>
